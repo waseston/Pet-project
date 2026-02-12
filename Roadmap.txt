@@ -1,0 +1,24 @@
+Fase ONE
+
+Base computer vision.
+    Goal:
+        Make a basic object decetvion programm
+    What to do:
+        Capture video form (web)camera
+        Detection of basic things
+            Like:
+                Face
+                human
+                Primitive figures
+        Draw a frame around an object
+
+Fase TWO
+
+Hand tracking: hand with fingers
+    Goal:
+        Make a programm that stabily tracks a hand with individual mapping of fingers
+    What to do:
+        Connect MediaPipe Hands
+        Get 21 key points of the hand
+        Draw a hand skeleton over the video
+        Check stability during movement
