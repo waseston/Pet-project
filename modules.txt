@@ -1,6 +1,6 @@
-/vision        → работа с камерой, детекция объектов
-/tracking      → трекинг рук, пальцев, ладони
-/interpret     → интерпретация позы руки в параметры (оси, клики)
-/input         → эмуляция мыши/кнопок (Windows/Linux)
-/ui            → отладочный интерфейс, оверлеи
-/main.py       → точка входа
+/vision        → camera operations, object detection
+/tracking      → hand, finger, and palm tracking
+/interpret     → hand pose interpretation into parameters (axes, clicks)
+/input         → mouse/button emulation (Windows/Linux)
+/ui            → debug interface, overlays
+/main.py       → entry point
