@@ -13,7 +13,7 @@ The system detects and tracks hand landmarks in real time and serves as a founda
 
 ## Technologies
 
-- Python
+- Python 3.12.XX
 - OpenCV
 - MediaPipe
 
@@ -25,7 +25,11 @@ Clone the repository:
 git clone https://github.com/your-username/gesture-control-interface.git
 cd gesture-control-interface
 
+```
+
 ## Install dependencies
+
+```python
 
 pip install opencv-python mediapipe
 
@@ -35,7 +39,7 @@ pip install opencv-python mediapipe
 
 Run the main script:
 
-```bash
+```pyhon
 
 python main.py
 
