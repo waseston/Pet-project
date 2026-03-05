@@ -1,7 +1,7 @@
 import cv2
 
 class Camera:
-    def __init__(self, camera_id=0):
+    def __init__(self, camera_id=1):
         self.cap = cv2.VideoCapture(camera_id)
 
         if not self.cap.isOpened():
