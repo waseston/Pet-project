@@ -28,3 +28,29 @@ cd gesture-control-interface
 ## Install dependencies
 
 pip install opencv-python mediapipe
+
+```
+
+## Usage
+
+Run the main script:
+
+```bash
+
+python main.py
+
+```
+The webcam will open and the system will start detecting hands.
+
+## Project Structure
+
+```bash
+
+gesture-control-interface
+│
+├── main.py
+├── tracking
+│   └── hand_tracker.py
+└── README.md
+
+```
