@@ -24,3 +24,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/your-username/gesture-control-interface.git
 cd gesture-control-interface
+
+## Install dependencies
+
+pip install opencv-python mediapipe
