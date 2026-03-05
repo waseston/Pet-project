@@ -1,40 +1,36 @@
-import cv2
 from tracking.hand_tracker import HandTracker
+import cv2
 
 
 def main():
-    # Открываем камеру (если не работает — попробуй 1 вместо 0)
     cap = cv2.VideoCapture(0)
-
-    if not cap.isOpened():
-        print("Не удалось открыть камеру")
-        return
-
     tracker = HandTracker()
 
-    # 🔹 Создаём изменяемое окно
     cv2.namedWindow("Hand Tracking", cv2.WINDOW_NORMAL)
-
-    # 🔹 Задаём начальный размер окна
     cv2.resizeWindow("Hand Tracking", 960, 540)
 
     while True:
         ret, frame = cap.read()
         if not ret:
-            print("Не удалось получить кадр")
             break
 
-        # Обработка руки
         frame, landmarks = tracker.process(frame)
 
-        # Можно вывести координаты указательного пальца
-        # if landmarks:
-            # print("Index tip:", landmarks[8])  # 8 — кончик указательного
+        if landmarks:
+            fingers = tracker.fingers_up(landmarks)
+            print("Fingers:", fingers)
+            
+            for lm in landmarks:
+                id, x, y = lm
 
-        # Показываем кадр
+                if id == 8:  # указательный палец
+                    cv2.circle(frame, (x, y), 10, (0, 255, 0), cv2.FILLED)
+                    cv2.putText(frame, f"Index: {x},{y}", (x, y-20),
+                                cv2.FONT_HERSHEY_SIMPLEX,
+                                0.7, (0,255,0), 2)
+
         cv2.imshow("Hand Tracking", frame)
 
-        # Выход по нажатию Q
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
