@@ -22,7 +22,7 @@ The system detects and tracks hand landmarks in real time and serves as a founda
 Clone the repository:
 
 ```bash
-git clone https://github.com/waseston/gesture-control-interface.git
+git clone https://github.com/waseston/Pet-project.git
 cd gesture-control-interface
 
 ```
