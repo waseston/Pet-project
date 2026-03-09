@@ -23,7 +23,8 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/waseston/Pet-project.git
-cd gesture-control-interface
+
+cd hand_controler
 
 ```
 
@@ -50,11 +51,13 @@ The webcam will open and the system will start detecting hands.
 
 ```bash
 
-gesture-control-interface
+hand_controller
 │
-├── main.py
 ├── tracking
 │   └── hand_tracker.py
+├── vision
+│   └── camera.py
+├── main.py
 └── README.md
 
 ```

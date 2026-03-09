@@ -3,7 +3,7 @@ import mediapipe as mp
 
 
 class HandTracker:
-    def __init__(self, max_hands=2):
+    def __init__(self, max_hands=5):
         self.mp_hands = mp.solutions.hands
         self.hands = self.mp_hands.Hands(
             max_num_hands=max_hands,
