@@ -13,7 +13,7 @@ The system detects and tracks hand landmarks in real time and serves as a founda
 
 ## Technologies
 
-- Python 3.12.XX
+- Python 3.12.10
 - OpenCV
 - MediaPipe
 
