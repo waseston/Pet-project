@@ -13,6 +13,13 @@ ctrl.scroll(dy)
 
 import platform
 import math
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    try:
+        import evdev  # noqa: F401  (Linux only — silences Pylance on Windows)
+    except ImportError:
+        pass
 
 _OS = platform.system()   # 'Windows' | 'Linux' | 'Darwin'
 
