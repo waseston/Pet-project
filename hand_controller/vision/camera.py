@@ -2,15 +2,17 @@ import cv2
 
 
 class Camera:
-    def __init__(self, camera_id=0, window_name="Hand Tracking", width=960, height=540):
+    def __init__(self, camera_id=0, window_name="Hand Tracking"):
         self.cap = cv2.VideoCapture(camera_id)
-        self.window_name = window_name
-
         if not self.cap.isOpened():
             raise RuntimeError("Failed to open camera.")
+    
+        # Use actual camera resolution instead of hardcoded values
+        w = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+        h = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
-        cv2.namedWindow(self.window_name, cv2.WINDOW_NORMAL)
-        cv2.resizeWindow(self.window_name, width, height)
+    cv2.namedWindow(self.window_name, cv2.WINDOW_NORMAL)
+    cv2.resizeWindow(self.window_name, w, h)
 
     def read(self):
         """Reads and returns the next frame. Raises RuntimeError if frame cannot be read."""
