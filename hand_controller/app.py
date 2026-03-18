@@ -1,5 +1,5 @@
 from vision.camera import Camera
-from vision.renderer import Renderer
+from vision.render import Renderer
 from tracking.hand_tracker import HandTracker
 
 
