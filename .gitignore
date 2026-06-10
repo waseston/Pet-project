@@ -2,7 +2,9 @@ venv/
 __pycache__/
 .vscode/
 *.pyc
-./build/
-./dist/
-./main.spec/
-./main/
+
+# PyInstaller build artifacts
+build/
+dist/
+main/
+*.spec
