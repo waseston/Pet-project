@@ -48,7 +48,7 @@ python main.py
 The webcam will open and the system will start detecting hands.
 
 ## Screenshot of programm 
-![My Project Screenshot](./images/image_gci1.png)
+![My Project Screenshot](./hand_controller/images/image_gci1.png)
 
 
 ## Project Structure
