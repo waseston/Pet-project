@@ -30,9 +30,21 @@ cd hand_controler
 
 ## Install dependencies
 
+Depending on your system's OS, you need to install the appropriate dependencies.
+
+ - Windows:
+
 ```python
 
-pip install opencv-python mediapipe
+pip install -r requirements_win.txt
+
+```
+
+ - MacOS(intel)
+
+ ```python
+
+pip install -r requirements_mac.txt
 
 ```
 
